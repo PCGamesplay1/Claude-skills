@@ -20,12 +20,18 @@ python3 run_monday_workflow.py
 ```
 
 **Order of operations:**
-1. Clear Release Radar Copy → refill from Release Radar
+1. Attempt to sync Release Radar Copy from Release Radar — read-first: only erases and refills if Spotify allows API access. If blocked (Spotify intentionally restricts personalised playlists), skips gracefully and Steps 2–6 still run on the existing copy.
 2. Extract remixes from Release Radar Copy (ISRC dedup, English-only via UK/US market)
 3. Broad remix search across Spotify (dedup via `added_remixes.txt`, English-only)
 4. DNB new releases (merged: user ref + promoter ref)
 5. R&B new releases
 6. EDM new releases (Armada Music roster via Armada New Releases playlist)
+
+**Release Radar limitation:** Spotify blocks API access to "Made for You" personalised playlists (Release Radar, Discover Weekly, etc.). Step 1 attempts access but will likely be blocked. When it is, the copy is left untouched — it is never erased unless a successful read confirms Release Radar is accessible.
+
+**Manual update (takes ~2 min, do before running):**
+1. Spotify app → Release Radar → `...` → Select All → Add to playlist → **Release Radar Copy**
+2. Then run `python3 run_monday_workflow.py` — Steps 2–6 handle the rest automatically
 
 **Playlist IDs:**
 
