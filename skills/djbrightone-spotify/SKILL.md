@@ -6,7 +6,7 @@ license: Private
 
 # djbrightone Spotify Skill
 
-Weekly automated Spotify workflow for DJ Brightone. All scripts live in Google Drive at `My Drive/spotify-remix/`.
+Weekly automated Spotify workflow for DJ Brightone. Scripts live in this repo under `skills/djbrightone-spotify/scripts/`. Runtime state (`.cache`, `added_remixes.txt`, dated output folders) lives in Google Drive at `My Drive/spotify-remix/`.
 
 ---
 
@@ -16,7 +16,7 @@ Runs automatically every Monday at 14:00 local time via launchd. To trigger manu
 
 ```bash
 cd "/Users/voyager1/Library/CloudStorage/GoogleDrive-pcgamesplay1@gmail.com/My Drive/spotify-remix"
-python3 run_monday_workflow.py
+python3 ~/claude-skills/skills/djbrightone-spotify/scripts/run_monday_workflow.py
 ```
 
 **Order of operations:**
@@ -53,17 +53,17 @@ Run manually — human-triggered only. Never runs as part of Monday automation.
 ### Import promoter's artist list
 
 1. Paste artist names (one per line) into `artists_to_add.txt` in the spotify-remix folder
-2. Generate review: `python3 maintain_artists.py --import`
+2. Generate review: `python3 ~/claude-skills/skills/djbrightone-spotify/scripts/maintain_artists.py --import`
 3. Open `artist_import_review_YYYY-MM-DD.txt` — verify each Spotify match is correct
-4. Apply: `python3 maintain_artists.py --import --apply`
+4. Apply: `python3 ~/claude-skills/skills/djbrightone-spotify/scripts/maintain_artists.py --import --apply`
 
 Non-English artists are filtered automatically (no UK/US market availability).
 
 ### Prune inactive artists (12-month threshold)
 
 ```bash
-python3 maintain_artists.py --prune           # generate internal report
-python3 maintain_artists.py --prune --apply   # remove flagged artists
+python3 ~/claude-skills/skills/djbrightone-spotify/scripts/maintain_artists.py --prune           # generate internal report
+python3 ~/claude-skills/skills/djbrightone-spotify/scripts/maintain_artists.py --prune --apply   # remove flagged artists
 ```
 
 Only affects owned playlists (DNB user ref, R&B). Promoter and Armada playlists are never auto-modified.
@@ -80,12 +80,20 @@ When promoter's dedicated EDM playlist is confirmed, update `EDM_REF` in `run_mo
 
 ## launchd Setup (one-time, on Mac)
 
+First clone the repo if not already done:
 ```bash
-cp "/Users/voyager1/Library/CloudStorage/GoogleDrive-pcgamesplay1@gmail.com/My Drive/spotify-remix/com.djbrightone.spotify.monday.plist" \
+git clone https://github.com/pcgamesplay1/claude-skills.git ~/claude-skills
+```
+
+Then load the plist:
+```bash
+cp ~/claude-skills/skills/djbrightone-spotify/scripts/com.djbrightone.spotify.monday.plist \
    ~/Library/LaunchAgents/
 
 launchctl load ~/Library/LaunchAgents/com.djbrightone.spotify.monday.plist
 ```
+
+To update scripts in future: `cd ~/claude-skills && git pull` — no file management needed.
 
 Verify it loaded:
 ```bash
