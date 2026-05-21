@@ -12,7 +12,7 @@ Weekly automated Spotify workflow for DJ Brightone. All scripts live in Google D
 
 ## Monday Workflow
 
-Runs automatically every Monday at 09:00 via launchd. To trigger manually:
+Runs automatically every Monday at 14:00 local time via launchd. To trigger manually:
 
 ```bash
 cd "/Users/voyager1/Library/CloudStorage/GoogleDrive-pcgamesplay1@gmail.com/My Drive/spotify-remix"
@@ -97,7 +97,7 @@ View live logs:
 tail -f ~/Library/Logs/djbrightone-spotify.log
 ```
 
-**BST note:** launchd uses local time. UK is UTC in winter, UTC+1 in summer (BST: late March–late October). Change `Hour` in the plist from `9` to `8` during BST if strict 09:00 UTC is required.
+**BST note:** launchd uses local time. UK is UTC in winter, UTC+1 in summer (BST: late March–late October). Change `Hour` in the plist from `14` to `13` during BST if strict 14:00 UTC is required.
 
 ---
 
