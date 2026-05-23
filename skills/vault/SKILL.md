@@ -53,6 +53,20 @@ Fetch both files and summarise:
 - Most recent log entry date and category
 - Any open items listed in the most recent log entries
 
+### `/vault personal` or `/vault personal read`
+Same as `/vault read` but for the personal wiki:
+1. Fetch `wiki-personal/index.md` and `wiki-personal/log.md` in parallel from `PCGamesplay1/Claude-skills` (branch: `main`)
+2. Display index first, then most recent 3–5 log entries
+3. Raw URLs:
+   - `https://raw.githubusercontent.com/PCGamesplay1/Claude-skills/main/wiki-personal/index.md`
+   - `https://raw.githubusercontent.com/PCGamesplay1/Claude-skills/main/wiki-personal/log.md`
+
+### `/vault personal log`
+Append a new entry to `wiki-personal/log.md` — identical procedure to `/vault log` but targeting `wiki-personal/log.md`. Fetch current file SHA first, insert entry at top after the header `---`, push via `mcp__github__create_or_update_file`.
+
+### `/vault personal status`
+Summarise the personal wiki: page counts from index, most recent log entry, open items.
+
 ### `/vault sync`
 This command requires the local Mac vault. Explain:
 - On **Mac**: run `vault github sync` in Terminal (or `vault ingest all` for the full pipeline)
@@ -79,7 +93,7 @@ Sync the wiki to NotebookLM. Works on any platform via two MCP connections:
 
 **NLM notebook IDs:**
 - AI wiki: `38bfb58a`
-- Personal wiki: `64447237-2416-438c-8752-1c34ca85790f`
+- Personal wiki (Claude Cowork + personal projects): `64447237-2416-438c-8752-1c34ca85790f`
 
 **State file location:** `wiki/stats/nlm-sync-state.json` (in this GitHub repo)
 
