@@ -58,6 +58,17 @@ This command requires the local Mac vault. Explain:
 - On **Mac**: run `vault github sync` in Terminal (or `vault ingest all` for the full pipeline)
 - On **Windows/Linux/web**: not available — the Obsidian vault is iCloud-only. Use `/vault log` to manually append entries instead.
 
+### `/vault nlm`
+Sync the wiki to NotebookLM. NotebookLM has no public API — this runs `vault-nlm-sync.sh` locally.
+
+- On **Mac**: run `vault ingest nlm` in Terminal
+  - Bundles wiki `.md` files by category (Concepts, Entities, Sources, Syntheses, HA, Log+Index)
+  - Deletes stale NLM sources, uploads fresh bundles as text sources
+  - Updates `wiki/stats/nlm-sync-state.json` with new source IDs
+  - AI wiki notebook: `38bfb58a`
+  - Personal wiki notebook: `64447237-2416-438c-8752-1c34ca85790f`
+- On **Windows/Linux/web**: not available — requires local Google auth and the Mac vault. Suggest the user run it on their Mac, or use `vault ingest all` which includes the NLM step automatically.
+
 ## Notes
 
 - Always fetch the current file SHA before writing — required by the GitHub API to prevent conflicts
