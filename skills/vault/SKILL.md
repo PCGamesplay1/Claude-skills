@@ -59,15 +59,31 @@ This command requires the local Mac vault. Explain:
 - On **Windows/Linux/web**: not available — the Obsidian vault is iCloud-only. Use `/vault log` to manually append entries instead.
 
 ### `/vault nlm`
-Sync the wiki to NotebookLM. NotebookLM has no public API — this runs `vault-nlm-sync.sh` locally.
+Sync the wiki to NotebookLM. Works on any platform via two MCP connections:
+- **Obsidian/iCloud file MCP** — reads wiki `.md` files from the vault
+- **notebooklm-mcp-cli** — writes sources to NotebookLM (35 MCP tools, browser-authenticated)
 
-- On **Mac**: run `vault ingest nlm` in Terminal
-  - Bundles wiki `.md` files by category (Concepts, Entities, Sources, Syntheses, HA, Log+Index)
-  - Deletes stale NLM sources, uploads fresh bundles as text sources
-  - Updates `wiki/stats/nlm-sync-state.json` with new source IDs
-  - AI wiki notebook: `38bfb58a`
-  - Personal wiki notebook: `64447237-2416-438c-8752-1c34ca85790f`
-- On **Windows/Linux/web**: not available — requires local Google auth and the Mac vault. Suggest the user run it on their Mac, or use `vault ingest all` which includes the NLM step automatically.
+**Sync procedure:**
+1. Use the Obsidian file MCP to read the wiki files, bundled by category:
+   - Concepts bundle: all `wiki/concepts/*.md`
+   - Entities bundle: all `wiki/entities/*.md`
+   - Sources bundle: all `wiki/sources/*.md`
+   - Syntheses bundle: all `wiki/syntheses/*.md`
+   - HA bundle: all `wiki-ha/**/*.md`
+   - Log+Index bundle: `wiki/log.md` + `wiki/index.md`
+2. For each bundle that has changed since last sync:
+   - Delete the stale NLM source (use source ID from `wiki/stats/nlm-sync-state.json`)
+   - Add the updated bundle as a new text source via notebooklm-mcp-cli
+   - Record the new source ID back to `wiki/stats/nlm-sync-state.json`
+3. Update the state file via GitHub MCP so the record persists across sessions
+
+**NLM notebook IDs:**
+- AI wiki: `38bfb58a`
+- Personal wiki: `64447237-2416-438c-8752-1c34ca85790f`
+
+**State file location:** `wiki/stats/nlm-sync-state.json` (in this GitHub repo)
+
+**If notebooklm-mcp-cli is not configured:** inform the user and link to setup — `https://github.com/jacob-bd/notebooklm-mcp-cli`
 
 ## Notes
 
