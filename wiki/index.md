@@ -23,6 +23,7 @@
 | [[ai-cost-observability]] | Tools + practices for measuring and optimizing AI token spend |
 | [[skill-ecosystem]] | 4-marketplace Claude Code skill stack: superpowers, antigravity, karpathy, caveman |
 | [[agent-native-cli]] | Design pattern for LLM-consumable CLIs: auto-JSON, typed exit codes, --compact, SQLite |
+| [[demand-tree-knowledge-production]] | Demand map vs supply map — ROI-weighted gap map for self-directed AI knowledge production |
 
 ## Entities
 
@@ -59,4 +60,4 @@
 
 ---
 
-Last updated: 2026-05-21
+Last updated: 2026-05-25

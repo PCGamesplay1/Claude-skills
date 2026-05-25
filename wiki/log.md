@@ -4,6 +4,25 @@
 
 ---
 
+## [2026-05-25] CONCEPT — Demand tree / cognitive skeleton / ROI-weighted knowledge gaps
+
+**Trigger**: Deep analysis of Andy K's "The Right Problem" (thebooq.com / Medium) + Karpathy LLM Wiki synthesis
+
+**Page created:**
+- `concepts/demand-tree-knowledge-production.md` — core concept, ROI formula, three-layer architecture, session log mining, synthesis with Karpathy model
+
+**Core insight logged**: Supply maps (existing wikis) record what exists. Demand trees record what's needed, weighted by `frequency × consequence`. The gap between the two is a production queue for AI. Session transcripts in `~/.claude/projects/` are already a demand signal — mining them gives a rough demand tree for free.
+
+**Index updated**: `wiki/index.md` — new Concepts row + date bumped to 2026-05-25
+
+**⚠ OPEN ITEM — REVIEW BY 2026-06-01:**
+- [ ] Audit full skills setup (project vs global scoping)
+- [ ] Verify /vault and /higgsfield slash commands work after session sync
+- [ ] Decide if Higgsfield needs a top-level SKILL.md dispatcher
+- [ ] Consider building demand tree extraction pass over `~/.claude/projects/` logs
+
+---
+
 ## [2026-05-25] WORKFLOW — Skills auto-sync hook + review reminder (2026-06-01)
 
 **Session**: Claude Code remote (claude-sonnet-4-6)
