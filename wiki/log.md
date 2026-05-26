@@ -4,6 +4,40 @@
 
 ---
 
+## [2026-05-26] INGEST — 3 Master NLM guides (FACS + Empathy + Emotional Cues) — pass 2
+
+**Source**: Google Drive Master .md files — NLM notebooks titled "The Master FACS Guide...", "The Master Empathy in Cinema...", "The Master Emotional Cues in..."  
+**Agent**: Claude Code (claude-sonnet-4-6)  
+**Method**: Google Drive MCP read → create wiki source pages
+
+**Files ingested:**
+
+| Drive File | NLM Notebook | Sources | Wiki |
+|---|---|---|---|
+| facs-va-valence-emotion-guide-2026.md | 69ec4dd0 | 82 | AI wiki |
+| empathy-cinematic-mind-guide-2026.md | f1adc6f8 | 52 | Personal wiki |
+| emotional-cues-cinema-guide-2026.md | 54666836 | 57 | Personal wiki |
+
+**Pages created (3):**
+- `wiki/sources/nlm-master-facs-emotion-2026.md` — AU table (AU1–AU26), Universal Emotion combinations, VA circumplex + VAD 3D, micro-expression detection, SynchroRaMa + FaceCrafter, AI prompting quick ref
+- `wiki-personal/sources/nlm-master-empathy-cinema-2026.md` — Mirror Mechanism, Embodied Simulation, ISC 45% neocortex sync, Murray Smith Structure of Sympathy, Plantinga 4.5–5s close-up rule, uncanny valley triggers, AI character designer principles
+- `wiki-personal/sources/nlm-master-emotional-cues-cinema-2026.md` — Luminant Dramaturgy table, Chromatic Drivers, Emotional Prosody, Eisenstein 5 montage types, Walter Murch Rule of Six (51% emotion), Mood-Cue 5-step workflow, Pixar Up case study
+
+**Skipped (no Drive export found):**
+- "Theoretical Media Youtube Master..." (9 sources, 2026-05-25) — no .md export exists yet
+- "DJBrightones Prompting Master" (30 sources, 2026-04-17) — no .md export exists yet
+
+**Index updated**: 1 new Sources row (FACS — personal wiki pages tracked separately in wiki-personal/)
+
+**Key facts ingested:**
+- AU 6 (orbicularis oculi) = Duchenne marker — its absence means a smile reads as fake/social
+- ISC: structured films synchronise 45% of neocortex across audience members
+- Walter Murch Rule of Six: emotion is 51% of the cut decision
+- Optimal close-up duration for significant objects: 4.5–5 seconds exactly
+- Micro-expressions: 0.04–0.5s duration, involuntary, universal across cultures
+
+---
+
 ## [2026-05-26] INGEST — 5 Master NLM guides (AI video + personal)
 
 **Source**: Google Drive Master .md files — compiled from NotebookLM notebooks with "Master" in title  

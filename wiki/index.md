@@ -56,6 +56,7 @@
 | [[nlm-master-veo-professional-2026]] | 49-source Veo 3.1 professional guide — JSON schemas, continuity protocols, troubleshooting tree |
 | [[nlm-master-veo3-april-2026]] | 49-source community Veo 3 guide — Sonic Landscaping, timestamp multi-shot, hand-over-hand chaining |
 | [[nlm-master-comfyui-2026]] | 58-source ComfyUI guide — VRAM thresholds, LTX-2.3 two-stage pipeline, launch flags |
+| [[nlm-master-facs-emotion-2026]] | 82-source FACS guide — AU reference, Universal Emotion combinations, VA model, micro-expression detection, AI animation pipeline |
 
 ## Syntheses
 
@@ -65,4 +66,4 @@
 
 ---
 
-Last updated: 2026-05-26
+Last updated: 2026-05-26 (pass 2)
