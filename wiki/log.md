@@ -4,6 +4,42 @@
 
 ---
 
+## [2026-05-26] INGEST — 5 Master NLM guides (AI video + personal)
+
+**Source**: Google Drive Master .md files — compiled from NotebookLM notebooks with "Master" in title  
+**Agent**: Claude Code (claude-sonnet-4-6)  
+**Method**: Google Drive MCP search → read content → create wiki source pages
+
+**Files ingested (NLM-sourced only):**
+
+| File | NLM Notebook | Sources | Wiki |
+|---|---|---|---|
+| Master AI Creation Guide May 2026.md (v1.3, Phase 4) | 69fa8912 | 100 | AI wiki |
+| master-veo-professional-2026.md | 09b39c77 | 49 | AI wiki |
+| master-veo3-prompting-april-2026.md | 3c5a93bf | 49 | AI wiki |
+| master-comfyui-2026.md | 80eb9ef9 | 58 | AI wiki |
+| wes-anderson-cinema-master-guide-2026.md | 7e7977a0 + 2931413d | 69 | Personal wiki |
+
+**Skipped** (older versions of same notebooks): MASTER_AI_CREATION_GUIDE.md, master-ai-video-image-guide-2026.md
+
+**Pages created (6):**
+- `wiki/sources/nlm-master-ai-creation-guide-2026.md` — 14-model canonical stack, Master JSON template
+- `wiki/sources/nlm-master-veo-professional-2026.md` — Veo 3.1 schemas, continuity protocols, troubleshooting
+- `wiki/sources/nlm-master-veo3-april-2026.md` — Sonic Landscaping, timestamp syntax, hand-over-hand chaining
+- `wiki/sources/nlm-master-comfyui-2026.md` — VRAM thresholds, LTX-2.3 two-stage pipeline, launch flags
+- `wiki/concepts/ai-video-prompting.md` — cross-model synthesis: 4-step workflow, JSON vs NL performance data, failure modes
+- `wiki-personal/sources/nlm-master-wes-anderson-cinema-2026.md` — 9 visual rules, color psychology, stop-motion, shot reference
+
+**Index updated**: 4 new Sources rows + 1 new Concept row
+
+**Key facts ingested:**
+- JSON prompting outperforms natural language 78% vs 34% first-try success rate (Veo 3.1, 50-run test)
+- Sonic Landscaping: audio cues force more physically accurate visuals — Veo 3.1 is audio-visual simultaneous
+- LTX-2.3 minimum VRAM: 12GB (distilled/FP8); recommended: 24GB (full BF16)
+- Temporal Dominance rule applied — 26 raw model variants collapsed to 14 canonical
+
+---
+
 ## [2026-05-25] CONCEPT — Demand tree / cognitive skeleton / ROI-weighted knowledge gaps
 
 **Trigger**: Deep analysis of Andy K's "The Right Problem" (thebooq.com / Medium) + Karpathy LLM Wiki synthesis

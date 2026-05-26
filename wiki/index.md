@@ -24,6 +24,7 @@
 | [[skill-ecosystem]] | 4-marketplace Claude Code skill stack: superpowers, antigravity, karpathy, caveman |
 | [[agent-native-cli]] | Design pattern for LLM-consumable CLIs: auto-JSON, typed exit codes, --compact, SQLite |
 | [[demand-tree-knowledge-production]] | Demand map vs supply map — ROI-weighted gap map for self-directed AI knowledge production |
+| [[ai-video-prompting]] | Cross-model synthesis — JSON vs NL, Sonic Landscaping, timestamp syntax, continuity protocols, ComfyUI VRAM |
 
 ## Entities
 
@@ -51,6 +52,10 @@
 | [[vault-setup-session]] | Founding session: Obsidian vault structure, nested vault discovery, Smart Connections MCP setup |
 | [[mcp-connector-management]] | MCP toggle patterns: disabled.json, SwiftBar plugin, Claude Desktop config race condition |
 | [[cli-printing-press]] | Agent-driven Go CLI + MCP server generator from any API spec — printing-press v4.9.0 |
+| [[nlm-master-ai-creation-guide-2026]] | 100-source Phase 4 master — 14-model canonical stack, Master JSON template, 4-step workflow |
+| [[nlm-master-veo-professional-2026]] | 49-source Veo 3.1 professional guide — JSON schemas, continuity protocols, troubleshooting tree |
+| [[nlm-master-veo3-april-2026]] | 49-source community Veo 3 guide — Sonic Landscaping, timestamp multi-shot, hand-over-hand chaining |
+| [[nlm-master-comfyui-2026]] | 58-source ComfyUI guide — VRAM thresholds, LTX-2.3 two-stage pipeline, launch flags |
 
 ## Syntheses
 
@@ -60,4 +65,4 @@
 
 ---
 
-Last updated: 2026-05-25
+Last updated: 2026-05-26
